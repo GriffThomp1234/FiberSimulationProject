@@ -1,5 +1,4 @@
 ﻿# Fiber Simulation Project
-# Fiber Simulation Project
 
 ## Overview
 
@@ -40,46 +39,6 @@ We leverage state-of-the-art simulation techniques to understand and predict fib
 
 ---
 
-## Project Structure
-📂 FiberSimulationProject
-├── 📂 Fiber_Physics
-│   ├── README.md                 # Overview of fiber properties (Chapters from Fiber Technology)
-│   ├── 📂 PhysicalModels          # Python scripts for fiber elasticity, strength, and material interactions
-│
-├── 📂 FEM_Simulations
-│   ├── README.md                 # Explanation of FEM projects
-│   ├── 📂 Chapter1_Basics         # Simple FEM stiffness matrix solvers
-│   ├── 📂 Dynamic_Problems        # Newmark, Trapezoidal algorithms
-│   └── 📂 Eigenvalue_Analysis     # Scripts for eigenvalue problems and stability analysis
-│
-├── 📂 CFD_Simulations
-│   ├── README.md                 # Explanation of CFD workflows
-│   ├── 📂 Stationary_Fibers       # Stationary fiber in fluid flow (Simple Finite Volume models)
-│   ├── 📂 Turbulence_Models       # k-ε and k-ω turbulence models
-│   └── 📂 FiberFluidInteraction   # Simulations for fibers interacting with airflow
-│
-├── 📂 Multiphysics_Simulations
-│   ├── README.md                 # Overview of Multiphysics simulations
-│   ├── 📂 COMSOL_Workflows        # COMSOL simulation files and workflows
-│   ├── 📂 Coupled_Simulations     # FEM + CFD integration simulations
-│   └── 📂 Biomedical_Applications # Advanced applications for fiber-reinforced biomedical devices
-│
-├── 📂 Docs
-│   ├── Progress_Notes.md         # Notes on project progress
-│   ├── Chapter_Summaries.md      # Summaries of book chapters for reference
-│   ├── Resources.md              # Reference materials, links, and guides
-│   └── Coding_Guide.md           # Coding standards, tips, and tools used in the project
-│
-├── 📂 Tests
-│   ├── 📂 FEM_Tests              # Scripts for validating FEM implementations
-│   ├── 📂 CFD_Tests              # Scripts for validating CFD models
-│   └── 📂 Multiphysics_Tests     # Scripts for testing coupled simulations
-│
-└── README.md                     # Main overview of the project
-
-
----
-
 ## Book References and Goals
 
 The project is informed by the following key texts. Each book contributes to a distinct area of the project:
@@ -101,12 +60,4 @@ The project is informed by the following key texts. Each book contributes to a d
    - **Focus**: Workflow optimization, COMSOL scripting, and heat transfer in fiber-reinforced composites.
 
 ---
-
-## Collaboration Workflow
-
-### 1. **Setting Up the Repository**
-- Clone the repository:
-  ```bash
-  git clone https://github.com/GriffThomp1234/FiberSimulationProject.git
-  cd FiberSimulationProject
 

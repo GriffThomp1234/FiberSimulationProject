@@ -1,3 +1,46 @@
+# 2D Heat Conduction in a Rectangular Fiber using FEM
+# ---------------------------------------------------
+# Problem Description:
+# This program solves the 2D heat conduction equation in a rectangular fiber using the Finite Element Method (FEM).
+# The governing PDE is:
+#     -∇⋅[k(x, y) ∇T(x, y)] = q(x, y), for (x, y) ∈ Ω,
+# where:
+#     T(x, y) = temperature distribution (unknown we solve for),
+#     k(x, y) = thermal conductivity of the fiber (W/m·K),
+#     q(x, y) = heat source term (W/m²),
+#     Ω = 2D domain of the fiber (rectangular shape, size Lx × Ly).
+#
+# Boundary Conditions:
+# 1. Dirichlet Condition: Fixed temperature at the left boundary (x = 0):
+#        T(0, y) = 100°C, for y ∈ [0, Ly].
+# 2. Neumann Condition: Fixed heat flux at the right boundary (x = Lx):
+#        -k ∂T/∂x |_{x=Lx} = q_flux, for y ∈ [0, Ly].
+#        (e.g., q_flux = 50 W/m²).
+#
+# Material and Setup:
+# - Fiber dimensions: Lx = 0.1 m (length in x), Ly = 0.02 m (length in y).
+# - Thermal conductivity: k = 100 W/m·K (constant).
+# - Uniform heat generation: q = 500 W/m².
+#
+# Steps:
+# 1. Divide the 2D domain into nx × ny = 10 × 10 elements.
+# 2. Generate the finite element mesh with nodal positions and numbering.
+# 3. Assemble the global stiffness matrix (K) and force vector (F) using FEM principles:
+#        a. Compute local stiffness matrices for bilinear elements.
+#        b. Add contributions to the global matrix/vector.
+# 4. Apply boundary conditions:
+#        a. Dirichlet at x=0 (fixed temperature on left boundary).
+#        b. Neumann at x=Lx (heat flux on right boundary).
+# 5. Solve the linear system (K * T = F) to find the nodal temperatures.
+# 6. Visualize the temperature distribution as a contour plot.
+#
+# Output:
+# - Temperature values at each node in the 2D grid.
+# - Contour plot of temperature distribution over the 2D domain.
+#
+# Example Application:
+# - Simulate heat transfer through a fiber-like material to observe the thermal gradient due to a heat source and specified boundary conditions.
+
 import numpy as np
 import matplotlib.pyplot as plt
 
